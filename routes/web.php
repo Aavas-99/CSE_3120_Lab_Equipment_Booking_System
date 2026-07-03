@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\AuthController;
 use App\Http\Controllers\AdminController;
+use App\Http\Controllers\StudentController;
 use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
@@ -24,4 +25,8 @@ Route::prefix('admin')->name('admin.')->group(function () {
     Route::patch('/bookings/{booking}/reject', [AdminController::class, 'rejectBooking'])->name('bookings.reject');
     Route::patch('/bookings/{booking}/issue', [AdminController::class, 'issueBooking'])->name('bookings.issue');
     Route::patch('/bookings/{booking}/return', [AdminController::class, 'returnBooking'])->name('bookings.return');
+});
+
+Route::prefix('student')->name('student.')->group(function () {
+    Route::get('/fines', [StudentController::class, 'fines'])->name('fines');
 });
