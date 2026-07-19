@@ -1,4 +1,4 @@
-﻿@extends('layouts.app')
+@extends('layouts.app')
 
 @section('content')
 <div class="mx-auto w-full max-w-md">
@@ -13,7 +13,12 @@
             @csrf
             <div>
                 <label class="block text-xs font-semibold uppercase tracking-wider text-slate-600 mb-1">Full Name</label>
-                <input type="text" name="name" value="{{ old('name') }}" required class="block w-full rounded-lg border border-slate-300 bg-slate-50 px-3.5 py-2 text-sm text-slate-800 placeholder-slate-400 shadow-sm transition focus:border-emerald-500 focus:bg-white focus:outline-none focus:ring-1 focus:ring-emerald-500" placeholder="e.g. John Doe">
+                <input type="text" name="name" value="{{ old('name') }}" required class="block w-full rounded-lg border border-slate-300 bg-slate-50 px-3.5 py-2 text-sm text-slate-800 placeholder-slate-400 shadow-sm transition focus:border-emerald-500 focus:bg-white focus:outline-none focus:ring-1 focus:ring-emerald-500" placeholder="e.g. Rana">
+            </div>
+            
+            <div>
+                <label class="block text-xs font-semibold uppercase tracking-wider text-slate-600 mb-1">Roll</label>
+                <input type="text" name="roll" value="{{ old('roll') }}" required class="block w-full rounded-lg border border-slate-300 bg-slate-50 px-3.5 py-2 text-sm text-slate-800 placeholder-slate-400 shadow-sm transition focus:border-emerald-500 focus:bg-white focus:outline-none focus:ring-1 focus:ring-emerald-500" placeholder="e.g. 2207094">
             </div>
             
             <div>
@@ -23,12 +28,12 @@
             
             <div>
                 <label class="block text-xs font-semibold uppercase tracking-wider text-slate-600 mb-1">Password</label>
-                <input type="password" name="password" required class="block w-full rounded-lg border border-slate-300 bg-slate-50 px-3.5 py-2 text-sm text-slate-800 placeholder-slate-400 shadow-sm transition focus:border-emerald-500 focus:bg-white focus:outline-none focus:ring-1 focus:ring-emerald-500" placeholder="********">
+                <input type="password" name="password" required class="block w-full rounded-lg border border-slate-300 bg-slate-50 px-3.5 py-2 text-sm text-slate-800 placeholder-slate-400 shadow-sm transition focus:border-emerald-500 focus:bg-white focus:outline-none focus:ring-1 focus:ring-emerald-500" placeholder="password">
             </div>
             
             <div>
                 <label class="block text-xs font-semibold uppercase tracking-wider text-slate-600 mb-1">Confirm Password</label>
-                <input type="password" name="password_confirmation" required class="block w-full rounded-lg border border-slate-300 bg-slate-50 px-3.5 py-2 text-sm text-slate-800 placeholder-slate-400 shadow-sm transition focus:border-emerald-500 focus:bg-white focus:outline-none focus:ring-1 focus:ring-emerald-500" placeholder="********">
+                <input type="password" name="password_confirmation" required class="block w-full rounded-lg border border-slate-300 bg-slate-50 px-3.5 py-2 text-sm text-slate-800 placeholder-slate-400 shadow-sm transition focus:border-emerald-500 focus:bg-white focus:outline-none focus:ring-1 focus:ring-emerald-500" placeholder="password">
             </div>
             
             <button type="submit" class="inline-flex w-full items-center justify-center gap-2 rounded-lg bg-emerald-700 px-4 py-2.5 text-sm font-semibold text-white shadow-sm transition hover:bg-emerald-800 focus:outline-none focus:ring-2 focus:ring-emerald-500 focus:ring-offset-2 mt-2">
@@ -41,5 +46,4 @@
     </div>
 </div>
 @endsection
-
 

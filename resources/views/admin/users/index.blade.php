@@ -12,6 +12,7 @@
             <thead class="bg-slate-50 text-xs font-bold uppercase tracking-wider text-slate-500">
                 <tr>
                     <th class="px-6 py-4">Name</th>
+                    <th class="px-6 py-4">Roll</th>
                     <th class="px-6 py-4">Email</th>
                     <th class="px-6 py-4">Total Bookings</th>
                     <th class="px-6 py-4">Account Status</th>
@@ -23,6 +24,9 @@
                     <tr class="transition hover:bg-slate-50">
                         <td class="whitespace-nowrap px-6 py-4.5 font-semibold text-slate-900">
                             {{ $student->name }}
+                        </td>
+                        <td class="whitespace-nowrap px-6 py-4.5 text-slate-600">
+                            {{ $student->roll ?? 'N/A' }}
                         </td>
                         <td class="whitespace-nowrap px-6 py-4.5 text-slate-600">
                             {{ $student->email }}
@@ -62,7 +66,7 @@
                     </tr>
                 @empty
                     <tr>
-                        <td colspan="5" class="px-6 py-8 text-center text-slate-500">
+                        <td colspan="6" class="px-6 py-8 text-center text-slate-500">
                             No student accounts found.
                         </td>
                     </tr>
