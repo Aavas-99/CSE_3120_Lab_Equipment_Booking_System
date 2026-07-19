@@ -23,6 +23,11 @@
                 </div>
                 
                 <div class="rounded-lg border border-slate-100 p-4">
+                    <span class="block text-xs text-slate-400 font-semibold uppercase tracking-wider">Roll</span>
+                    <span class="block mt-1 font-semibold text-slate-800 text-sm">{{ $user->roll ?? 'N/A' }}</span>
+                </div>
+                
+                <div class="rounded-lg border border-slate-100 p-4">
                     <span class="block text-xs text-slate-400 font-semibold uppercase tracking-wider">Email Address</span>
                     <span class="block mt-1 font-semibold text-slate-800 text-sm">{{ $user->email }}</span>
                 </div>
